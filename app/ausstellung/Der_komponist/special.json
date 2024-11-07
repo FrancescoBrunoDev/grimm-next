@@ -1,0 +1,80 @@
+[
+  {
+    "id": 1,
+    "src": "/img/4/1_Werke_im_Wandel/Wenn_droben_eine_Lerche_singt/2_Einzelblaetter/Unite.jpeg",
+    "alt": "",
+    "dots": [
+      {
+        "x": 10,
+        "y": 92,
+        "paragraph": {
+          "title": "Informationen für den Druck",
+          "text": "„+) Die Abbreviaturen müssen beim Stich der Deutlichkeit wegen alle ausgeschrieben werden.“"
+        }
+      },
+      {
+        "x": 12,
+        "y": 12,
+        "paragraph": {
+          "title": "Richard Pohl",
+          "text": "Naturromantische Lyrik von zeitgenössischen Dichtern inspirierte Grimm vielfach zu Liedkompositionen. Zu einigen Dichtern pflegte er auch persönliche Beziehungen. Pohl etwa besprach 1853 in der Fachzeitschrift <i>Signale für die musikalische Welt</i> die Aufführung des ersten Satzes von Grimms Sinfonie, der anlässlich des zehnjährigen Bestehens des Leipziger Konservatoriums aufgeführt wurde. Seine Freude über diese wohlwollende Rezension brachte Grimm in einem Brief an seinen Bruder kurz vor der Komposition dieses Liedes zum Ausdruck. In der Chorkomposition <i>Abendfeier</i> op. 8 Nr. 5 vertonte Grimm später noch ein weiteres Mal ein Gedicht Pohls. <br> Pohl, der unter dem Pseudonym „Hoplit“ 1855 eine durchaus kritische Artikelserie über Johannes Brahms publizierte, hatte eigentlich andere musikalische Vorlieben (Liszt, Berlioz, Wagner etc.)."
+        }
+      },
+      {
+        "x": 22,
+        "y": 8,
+        "paragraph": {
+          "title": "Titel",
+          "text": "Grimm vertonte das Gedicht <i>Überall</i> von Richard Pohl im Mai 1853. Zunächst wählte er „Wenn droben eine Lerche singt“ als Titel. In der späteren Ausgabe (frühe 1890er Jahre) des Deutschen Liederverlags (ebenfalls Breitkopf & Härtel) wird hingegen die letzte Verszeile „Immerdar gedenk ich Dein“ zum Titel und auch die Tempobezeichnung erscheint leicht verändert.",
+          "galleryIds": [
+            {
+              "title": "Pensionierungsgesuch, Münster, 25. Juli 1900",
+              "cover": "/img/4/1_Werke_im_Wandel/Wenn_droben_eine_Lerche_singt/ritagli/Titel_2.png"
+            }
+          ]
+        }
+      },
+      {
+        "x": 42,
+        "y": 20,
+        "paragraph": {
+          "title": "Text",
+          "text": "In dieser Handschrift notierte Grimm am oberen rechten Rand zwei weitere Strophen, die jedoch in keinem der Musikdrucke und auch nicht in Pohls Gedicht-Ausgabe (1859) veröffentlicht wurden. <br> V.2:<br>Auf’s weite Meer die Sonne lacht,<br> Es blitzt die blaue Fluth; –<br> Ich schau in all die güldne Pracht,<br> Mir wird so wohl zu Muth.<br> Da lacht mich an aus tiefstem Grund<br> Dein Antlitz wunderfein:<br> An jedem Ort etc.<br> [zu jeder Stund’: | Ach, immerdar gedenk’ ich Dein!] <br><br> V.3:<br> Bin ich im Wald allein, allein<br> In stiller dunkler Nacht,<br> Da strahlt dein Bildniß hold und rein<br> Mich an mit Zaubermacht; –<br> Dann ruf’ ich aus mit lautem Mund<br> Den stillen Wald hinein:<br> An jedem Ort etc.<br> [zu jeder Stund’: | Ach, immerdar gedenk’ ich Dein!]"
+        }
+      },
+      {
+        "x": 87,
+        "y": 70,
+        "paragraph": {
+          "title": "Datierung",
+          "text": "Aufgrund der Änderungen und Anmerkungen kann davon ausgegangen werden, dass diese beiden Blätter nach der Niederschrift im handschriftlichen Album („Mai 1853“) und vor dem Druck (1854) entstanden sind.",
+          "sideImg": true,
+          "galleryIds": [
+            {
+              "title": "Pensionierungsgesuch, Münster, 25. Juli 1900",
+              "cover": "/img/4/1_Werke_im_Wandel/Wenn_droben_eine_Lerche_singt/ritagli/HandgeschriebeneNoten_63_dettaglio.jpg"
+            }
+          ]
+        }
+      },
+      {
+        "x": 90,
+        "y": 32,
+        "paragraph": {
+          "title": "Musikalische Änderungen",
+          "text": "Die verschiedenen Quellen weisen in musikalischer Hinsicht nur wenige Unterschiede auf. Eine Ausnahme dokumentieren die Überklebungen sowie die zum Vergleich abgebildete Stelle im handschriftlichen Album.",
+          "galleryIds": [
+            {
+              "title": "Pensionierungsgesuch, Münster, 25. Juli 1900",
+              "cover": "/img/4/1_Werke_im_Wandel/Wenn_droben_eine_Lerche_singt/ritagli/HandgeschriebeneNoten_62_dettaglio.jpg"
+            },
+            {
+              "title": "Pensionierungsgesuch, Münster, 25. Juli 1900",
+              "cover": "/img/4/1_Werke_im_Wandel/Wenn_droben_eine_Lerche_singt/1_Prachtbändchen/HandgeschriebeneNoten_62-dettaglio@0,5x.jpg"
+            }
+          ]
+        }
+      }
+    ]
+  }
+]
