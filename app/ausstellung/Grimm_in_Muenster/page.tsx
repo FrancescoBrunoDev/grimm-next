@@ -15,7 +15,7 @@ export default function Grimm_in_Muenster() {
   const { ref, isInView } = useInView({});
 
   return (
-    <div className="hidden sm:block">
+    <div className="">
       <Hero
         className={cn(`fixed h-screen transition-all duration-700`, {
           "scale-90 opacity-20 blur-lg": isInView,
@@ -74,7 +74,7 @@ export default function Grimm_in_Muenster() {
         <div className="fixed inset-0 mt-10 flex items-center justify-center">
           <ImgDots
             className={cn(
-              "max-h-screen max-w-screen-xl gap-10 p-20 transition-all duration-700",
+              "max-h-screen max-w-screen-xl gap-10 p-5 pb-10 transition-all duration-700 xl:p-0",
               {
                 "scale-95 opacity-0": !isInView,
                 "scale-100 opacity-100": isInView,
@@ -82,8 +82,10 @@ export default function Grimm_in_Muenster() {
             )}
             data={dotsOnMap}
           >
-            <ImgDotsImage dotColor="red-700" />
-            <ImgDotsDescription />
+            <div className="h-full w-full max-w-lg grow xl:max-w-fit">
+              <ImgDotsImage dotColor="red-700" className="h-full min-w-fit" />
+            </div>
+            <ImgDotsDescription className="xl:w-1/3" />
           </ImgDots>
         </div>
       </Content>

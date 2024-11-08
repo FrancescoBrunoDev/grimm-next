@@ -149,7 +149,10 @@ const SpecialSelector = (special: { component: Specials; data: ImgDots }) => {
     case "ImgDots":
       return (
         <ImgDots data={special.data} className="bg-white">
-          <ImgDotsImage dotColor="white" />
+          <ImgDotsImage
+            dotColor="white"
+            className="xl:min-h-full xl:min-w-fit"
+          />
           <ImgDotsDescription />
         </ImgDots>
       );

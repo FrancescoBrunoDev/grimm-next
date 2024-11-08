@@ -1,9 +1,9 @@
 type Gallery = {
-    id: number;
+    id?: number;
     title: string;
     cover: string;
-    caption: string | null;
-    images: { src: string; caption: string | null }[];
+    caption?: string | null;
+    images?: { src: string; caption: string | null }[];
 }
 
 type ImgDots = {

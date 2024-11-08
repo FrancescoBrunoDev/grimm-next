@@ -3,6 +3,7 @@ import Image from "next/image";
 import { Circle } from "lucide-react";
 import { useState, createContext, useContext, ReactNode } from "react";
 import { cn } from "@/utils/utils";
+import { Gallery } from "@/components/Gallery";
 
 interface ImgDotsContextType {
   selectedDotIndex: number;
@@ -66,10 +67,10 @@ export const ImgDotsImage = ({
     selectedDotIndex,
     setSelectedDotIndex,
   } = context;
-
+  console.log(selectedDotIndex);
   return (
     <div
-      className={cn("relative w-fit xl:min-h-full xl:min-w-fit", className)}
+      className={cn("relative h-fit w-full", className)}
       style={{
         height: imageLoaded
           ? `${(imageLoaded.naturalHeight / imageLoaded.naturalWidth) * 100}%`
@@ -97,7 +98,7 @@ export const ImgDotsImage = ({
               "h-5 w-5 cursor-pointer drop-shadow-xl transition",
               `stroke-${dotColor}`,
               classNameDots,
-              selectedDotIndex !== index ? "fill-none" : `fill-${dotColor} `,
+              selectedDotIndex !== index ? "fill-none" : `fill-${dotColor}`,
             )}
           />
         </div>
@@ -106,18 +107,27 @@ export const ImgDotsImage = ({
   );
 };
 
-export const ImgDotsDescription = () => {
+interface ImgDotsDescriptionProps {
+  className?: string;
+}
+
+export const ImgDotsDescription = ({ className }: ImgDotsDescriptionProps) => {
   const context = useContext(ImgDotsContext);
   if (!context)
     throw new Error("ImgDotsDescription must be used within ImgDots");
   const { selectedDotIndex, data } = context;
 
   return (
-    <div className="h-full w-full overflow-y-auto rounded-lg bg-white p-4 text-black xl:w-1/2">
+    <div
+      className={cn(
+        "h-full w-full overflow-y-auto rounded-lg bg-white p-4 text-black xl:w-1/2",
+        className,
+      )}
+    >
       {selectedDotIndex !== null && (
         <div
           className={cn("flex gap-4", {
-            "flex-row xl:flex-col":
+            "flex-col xl:flex-row":
               data.dots[selectedDotIndex].paragraph.sideImg,
             "flex-col": !data.dots[selectedDotIndex].paragraph.sideImg,
           })}
@@ -137,12 +147,9 @@ export const ImgDotsDescription = () => {
               {data.dots[selectedDotIndex].paragraph.galleryIds.map(
                 (gallery, idx) => (
                   <div key={idx} className="w-48">
-                    <Image
+                    <Gallery
                       className="w-full rounded-lg object-contain"
-                      src={gallery.cover}
-                      alt={gallery.title}
-                      width={200}
-                      height={200}
+                      gallery={gallery}
                     />
                   </div>
                 ),

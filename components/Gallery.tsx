@@ -2,6 +2,7 @@
 
 import Image from "next/image";
 import { useState, useEffect } from "react";
+import { createPortal } from "react-dom";
 import { Expand, X, ChevronRight, ChevronLeft } from "lucide-react";
 import { cn } from "@/utils/utils";
 import { Content } from "@/components/Content";
@@ -12,11 +13,95 @@ type GalleryProps = {
   style?: React.CSSProperties;
 };
 
+type GalleryOverlayProps = {
+  isOpen: boolean;
+  isAnimating: boolean;
+  handleClose: () => void;
+  gallery: Gallery;
+  selected: number;
+  setSelected: (index: number) => void;
+};
+
+const GalleryOverlay: React.FC<GalleryOverlayProps> = ({
+  isOpen,
+  isAnimating,
+  handleClose,
+  gallery,
+  selected,
+  setSelected,
+}) => {
+  if (!isOpen) return null;
+
+  const images =
+    gallery.images && gallery.images.length > 0
+      ? gallery.images
+      : [
+          {
+            src: gallery.cover,
+            caption: gallery.caption || gallery.title,
+          },
+        ];
+
+  return createPortal(
+    <div
+      className={cn(
+        "fixed inset-0 z-[9999] flex items-center justify-center bg-black/70 text-white",
+        "transition-all duration-300",
+        {
+          "translate-y-0 scale-100 opacity-100 backdrop-blur-xl": isAnimating,
+          "translate-y-5 scale-95 opacity-0 backdrop-blur-0": !isAnimating,
+        },
+      )}
+    >
+      <Content className="relative h-full">
+        <button className="absolute right-4 top-4" onClick={handleClose}>
+          <X />
+        </button>
+        <div className="grid size-full grid-cols-1 grid-rows-6 justify-center gap-4">
+          <div
+            className={cn("flex", {
+              "row-span-6": images.length === 1,
+              "row-span-5": images.length > 1,
+            })}
+          >
+            {images.length > 1 && (
+              <button
+                onClick={() => setSelected(selected - 1)}
+                disabled={selected === 0}
+                className="disabled:opacity-50"
+              >
+                <ChevronLeft className="h-10 w-10" />
+              </button>
+            )}
+            <View selected={images[selected]} gallery={gallery} />{" "}
+            {images.length > 1 && (
+              <button
+                onClick={() => setSelected(selected + 1)}
+                disabled={selected === images.length - 1}
+                className="disabled:opacity-50"
+              >
+                <ChevronRight className="h-10 w-10" />
+              </button>
+            )}
+          </div>
+          {images.length > 1 && (
+            <Preview
+              images={images}
+              selected={selected}
+              setSelected={setSelected}
+            />
+          )}
+        </div>
+      </Content>
+    </div>,
+    document.body,
+  );
+};
+
 export const Gallery = ({ gallery, className, style }: GalleryProps) => {
   const [isOpen, setIsOpen] = useState(false);
   const [selected, setSelected] = useState(0);
   const [isAnimating, setIsAnimating] = useState(false);
-  const isMultipleImg = gallery.images.length > 1;
   const [coverLoaded, setCoverLoaded] = useState<HTMLImageElement | null>(null);
 
   // Modifica la funzione di chiusura
@@ -37,7 +122,7 @@ export const Gallery = ({ gallery, className, style }: GalleryProps) => {
       <button
         onClick={() => setIsOpen(true)}
         className={cn(
-          "group relative w-full overflow-hidden rounded-lg transition-all",
+          "group relative w-full overflow-hidden rounded-lg text-white transition-all",
           className,
         )}
         style={{
@@ -61,60 +146,14 @@ export const Gallery = ({ gallery, className, style }: GalleryProps) => {
           className="transition-all duration-500 group-hover:scale-105 group-hover:brightness-50"
         />
       </button>
-      {isOpen && (
-        <div
-          className={cn(
-            "fixed inset-0 z-50 bg-black/70",
-            "transition-all duration-300",
-            {
-              "translate-y-0 scale-100 opacity-100 backdrop-blur-xl":
-                isAnimating,
-              "translate-y-5 scale-95 opacity-0 backdrop-blur-0": !isAnimating,
-            },
-          )}
-        >
-          <Content className="relative h-full">
-            <button className="absolute right-4 top-4" onClick={handleClose}>
-              <X />
-            </button>
-            <div className="grid size-full grid-cols-1 grid-rows-6 justify-center gap-4">
-              <div
-                className={cn("flex", {
-                  "row-span-6": gallery.images.length === 1,
-                  "row-span-5": isMultipleImg,
-                })}
-              >
-                {isMultipleImg && (
-                  <button
-                    onClick={() => setSelected(selected - 1)}
-                    disabled={selected === 0}
-                    className="disabled:opacity-50"
-                  >
-                    <ChevronLeft className="h-10 w-10" />
-                  </button>
-                )}
-                <View selected={selected} gallery={gallery} />{" "}
-                {isMultipleImg && (
-                  <button
-                    onClick={() => setSelected(selected + 1)}
-                    disabled={selected === gallery.images.length - 1}
-                    className="disabled:opacity-50"
-                  >
-                    <ChevronRight className="h-10 w-10" />
-                  </button>
-                )}
-              </div>
-              {isMultipleImg && (
-                <Preview
-                  images={gallery.images}
-                  selected={selected}
-                  setSelected={setSelected}
-                />
-              )}
-            </div>
-          </Content>
-        </div>
-      )}
+      <GalleryOverlay
+        isOpen={isOpen}
+        isAnimating={isAnimating}
+        handleClose={handleClose}
+        gallery={gallery}
+        selected={selected}
+        setSelected={setSelected}
+      />
     </>
   );
 };
@@ -123,16 +162,18 @@ const View = ({
   selected,
   gallery,
 }: {
-  selected: number;
+  selected: {
+    src: string;
+    caption: string | null;
+  };
   gallery: Gallery;
 }) => {
-  const image = gallery.images[selected];
-  const caption = image.caption || gallery.caption || gallery.title;
+  const caption = selected.caption || gallery.caption || gallery.title;
   return (
     <div className="flex w-full flex-col items-center justify-center gap-4">
       <div className="relative size-full overflow-hidden rounded-lg">
         <Image
-          src={image.src}
+          src={selected.src}
           alt={caption}
           fill
           quality={80}

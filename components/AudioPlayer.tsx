@@ -21,6 +21,8 @@ interface ControlsProps {
   setCurrentTrackIndex: (index: number) => void;
 }
 
+let currentlyPlaying: HTMLAudioElement | null = null;
+
 const Controls: React.FC<ControlsProps> = ({
   audioRef,
   audioContextRef,
@@ -54,6 +56,11 @@ const Controls: React.FC<ControlsProps> = ({
   };
 
   const handlePlayPause = async () => {
+    if (currentlyPlaying && currentlyPlaying !== audioRef.current) {
+      currentlyPlaying.pause();
+    }
+    currentlyPlaying = audioRef.current;
+
     if (!isPlaying) {
       await audioContextRef.current?.resume();
       audioRef.current?.play();
