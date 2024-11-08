@@ -2,7 +2,11 @@
 import { Gallery } from "@/components/Gallery";
 import { cn, useInView } from "@/utils/utils";
 import AudioPlayer from "@/components/AudioPlayer";
-import { ImgDots } from "@/components/ImgDots";
+import {
+  ImgDots,
+  ImgDotsDescription,
+  ImgDotsImage,
+} from "@/components/ImgDots";
 
 interface ParagraphProps {
   className?: string;
@@ -144,7 +148,10 @@ const SpecialSelector = (special: { component: Specials; data: ImgDots }) => {
   switch (special.component) {
     case "ImgDots":
       return (
-        <ImgDots data={special.data} className="bg-white" dotColor="white" />
+        <ImgDots data={special.data} className="bg-white">
+          <ImgDotsImage dotColor="white" />
+          <ImgDotsDescription />
+        </ImgDots>
       );
     default:
       return null;

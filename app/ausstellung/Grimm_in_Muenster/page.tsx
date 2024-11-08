@@ -4,7 +4,11 @@ import { Hero } from "@/components/Hero";
 import { Content } from "@/components/Content";
 import { useEffect, useRef, useState } from "react";
 import { cn, useInView } from "@/utils/utils";
-import { ImgDots } from "@/components/ImgDots";
+import {
+  ImgDots,
+  ImgDotsDescription,
+  ImgDotsImage,
+} from "@/components/ImgDots";
 import dotsOnMap from "./dotsOnMap.json";
 
 export default function Grimm_in_Muenster() {
@@ -69,7 +73,6 @@ export default function Grimm_in_Muenster() {
       >
         <div className="fixed inset-0 mt-10 flex items-center justify-center">
           <ImgDots
-            dotColor="red-700"
             className={cn(
               "max-h-screen max-w-screen-xl gap-10 p-20 transition-all duration-700",
               {
@@ -78,7 +81,10 @@ export default function Grimm_in_Muenster() {
               },
             )}
             data={dotsOnMap}
-          />
+          >
+            <ImgDotsImage dotColor="red-700" />
+            <ImgDotsDescription />
+          </ImgDots>
         </div>
       </Content>
     </div>
