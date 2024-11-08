@@ -67,7 +67,7 @@ export const ImgDotsImage = ({
     selectedDotIndex,
     setSelectedDotIndex,
   } = context;
-  console.log(selectedDotIndex);
+
   return (
     <div
       className={cn("relative h-fit w-full", className)}

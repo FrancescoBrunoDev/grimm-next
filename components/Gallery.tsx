@@ -86,6 +86,7 @@ const GalleryOverlay: React.FC<GalleryOverlayProps> = ({
           </div>
           {images.length > 1 && (
             <Preview
+              fallbackCaption={gallery.caption || gallery.title}
               images={images}
               selected={selected}
               setSelected={setSelected}
@@ -104,13 +105,11 @@ export const Gallery = ({ gallery, className, style }: GalleryProps) => {
   const [isAnimating, setIsAnimating] = useState(false);
   const [coverLoaded, setCoverLoaded] = useState<HTMLImageElement | null>(null);
 
-  // Modifica la funzione di chiusura
   const handleClose = () => {
     setIsAnimating(false);
     setTimeout(() => setIsOpen(false), 500); // tempo della transizione
   };
 
-  // Aggiungi useEffect per gestire l'apertura
   useEffect(() => {
     if (isOpen) {
       setIsAnimating(true);
@@ -164,7 +163,7 @@ const View = ({
 }: {
   selected: {
     src: string;
-    caption: string | null;
+    caption?: string;
   };
   gallery: Gallery;
 }) => {
@@ -186,11 +185,13 @@ const View = ({
 };
 
 const Preview = ({
+  fallbackCaption,
   images,
   selected,
   setSelected,
 }: {
-  images: { src: string; caption: string | null }[];
+  fallbackCaption: string;
+  images: { src: string; caption?: string }[];
   selected: number;
   setSelected: (index: number) => void;
 }) => {
@@ -216,7 +217,7 @@ const Preview = ({
             quality={5}
             key={index}
             src={image.src}
-            alt={image.caption || `Image ${index + 1}`}
+            alt={image.caption || fallbackCaption}
           />
           <div className="absolute inset-0 flex items-center justify-center">
             <div className="h-8 w-8 rounded-full bg-white p-1 text-center text-black">
