@@ -33,5 +33,8 @@ const config: Config = {
     },
   },
   plugins: [],
+  safelist: [
+    'fill-red-700'
+  ],
 };
 export default config;

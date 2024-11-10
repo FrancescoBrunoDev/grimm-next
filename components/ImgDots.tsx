@@ -97,7 +97,7 @@ export const ImgDotsImage = ({
             onClick={() => setSelectedDotIndex(index)}
             className={cn(
               "h-5 w-5 cursor-pointer drop-shadow-xl transition",
-              `stroke-${dotColor}`,
+              `stroke-${dotColor} fill-${dotColor}`,
               classNameDots,
               selectedDotIndex !== index ? "fill-none" : `fill-${dotColor}`,
             )}
