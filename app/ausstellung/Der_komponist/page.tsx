@@ -81,7 +81,7 @@ export default function Der_komponist() {
           const paragraphGalleries = paragraph.galleryIds?.map((id: number) => {
             return galleries.find((gallery: Gallery) => gallery.id === id);
           }) as Gallery[];
-          const textSide = index % 2 === 0 ? "left" : "right";
+
           const paragraphSpecial = paragraph.specialIds?.map(
             (id: { id: number; component: string }) => {
               const data = special.find(
@@ -95,7 +95,7 @@ export default function Der_komponist() {
               key={index}
               paragraph={paragraph}
               galleries={paragraphGalleries}
-              textSide={textSide}
+              textSide="full"
               paragraphSpecial={paragraphSpecial}
             />
           );

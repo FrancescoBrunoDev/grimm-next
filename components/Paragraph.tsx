@@ -99,7 +99,10 @@ export const Paragraph = ({
               "opacity-100": isInView,
             })}
           >
-            <AudioPlayer tracks={paragraph.player} />
+            <AudioPlayer
+              className="max-w-screen-md"
+              tracks={paragraph.player}
+            />
           </div>
         )}
         {paragraphSpecial.map((special, index) => {

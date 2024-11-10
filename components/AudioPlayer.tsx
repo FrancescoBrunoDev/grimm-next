@@ -1,14 +1,7 @@
 "use client";
 import { useRef, useState, useEffect } from "react";
 import { Play, Pause, SkipForward, SkipBack } from "lucide-react";
-
-interface AudioPlayerProps {
-  tracks: {
-    name: string;
-    artist: string;
-    src: string;
-  }[];
-}
+import { cn } from "@/utils/utils";
 
 interface ControlsProps {
   audioRef: React.RefObject<HTMLAudioElement>;
@@ -130,11 +123,11 @@ const Timeline: React.FC<TimelineProps> = ({
     <div className="flex w-full flex-row items-center gap-2 text-sm">
       <span className="w-8 text-right">{formatTime(progress)}</span>
       <div
-        className="w-100 bg-background/40 h-2 flex-grow cursor-pointer rounded-full"
+        className="w-100 h-2 flex-grow cursor-pointer rounded-full bg-black/10"
         onClick={handleSliderChange}
       >
         <div
-          className="h-full rounded-full bg-background"
+          className="h-full rounded-full bg-black"
           style={{
             width: `${duration ? (progress / duration) * 100 : 0}%`,
           }}
@@ -144,6 +137,15 @@ const Timeline: React.FC<TimelineProps> = ({
     </div>
   );
 };
+
+interface AudioPlayerProps {
+  tracks: {
+    name: string;
+    artist: string;
+    src: string;
+  }[];
+  className?: string;
+}
 
 interface PlaylistProps {
   tracks: AudioPlayerProps["tracks"];
@@ -165,13 +167,13 @@ const Playlist: React.FC<PlaylistProps> = ({
           <button
             key={index}
             onClick={() => onTrackSelect(index)}
-            className={`hover:bg-background/5 flex w-full items-center justify-between rounded-md p-2 text-left transition ${
-              currentTrackIndex === index ? "bg-background/10" : ""
+            className={`flex w-full items-center justify-between rounded-md p-2 text-left transition hover:bg-black/5 ${
+              currentTrackIndex === index ? "bg-black/10" : ""
             }`}
           >
             <div>
               <div>{track.name}</div>
-              <div className="text-background/70 text-sm">{track.artist}</div>
+              <div className="text-sm text-black/70">{track.artist}</div>
             </div>
             {currentTrackIndex === index && isPlaying && (
               <div className="text-sm">Playing</div>
@@ -183,7 +185,10 @@ const Playlist: React.FC<PlaylistProps> = ({
   );
 };
 
-export const AudioPlayer: React.FC<AudioPlayerProps> = ({ tracks }) => {
+export const AudioPlayer: React.FC<AudioPlayerProps> = ({
+  tracks,
+  className,
+}) => {
   const [currentTrackIndex, setCurrentTrackIndex] = useState<number>(0);
   const [isPlaying, setIsPlaying] = useState<boolean>(false);
   const [progress, setProgress] = useState<number>(0);
@@ -248,7 +253,12 @@ export const AudioPlayer: React.FC<AudioPlayerProps> = ({ tracks }) => {
   }, [currentTrackIndex, isPlaying]);
 
   return (
-    <div className="bg-primary flex w-full flex-col items-center gap-2 rounded-lg p-4 text-background">
+    <div
+      className={cn(
+        "flex w-full flex-col items-center gap-2 rounded-lg bg-primary p-4 text-black",
+        className,
+      )}
+    >
       <Playlist
         tracks={tracks}
         currentTrackIndex={currentTrackIndex}
