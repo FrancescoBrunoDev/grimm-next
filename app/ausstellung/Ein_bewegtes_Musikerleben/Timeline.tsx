@@ -28,7 +28,7 @@ export const TimeLine = () => {
                   <h2 className="hidden text-2xl font-bold md:block md:w-fit">
                     {paragraph.year}
                   </h2>
-                  <Circle className={cn(`h-[20px] w-[20px] fill-white`)} />
+                  <Circle className={cn(`fill-primary h-[20px] w-[20px]`)} />
                 </>
               )}
             </div>
@@ -36,7 +36,7 @@ export const TimeLine = () => {
             <div
               key={index}
               className={cn(
-                `flex flex-col gap-8 border-l-4 border-white py-8 pl-4`,
+                `border-primary flex flex-col gap-8 border-l-4 py-8 pl-4`,
                 {
                   "pt-0": index === 0,
                   "pb-0": index === paragraphs.length - 1,

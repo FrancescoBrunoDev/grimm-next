@@ -3,7 +3,7 @@ import { useState } from "react";
 import { Menu, X } from "lucide-react";
 import { cn } from "@/utils/utils";
 import Link from "next/link";
-import Image from "next/image";
+import { Logo } from "@/components/Logo";
 
 export const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -13,15 +13,9 @@ export const Navbar = () => {
   };
 
   return (
-    <nav className="fixed inset-x-0 top-0 z-50 flex h-14 w-full items-center justify-between bg-black/60 px-8 py-1 backdrop-blur-xl">
+    <nav className="bg-background/60 fixed inset-x-0 top-0 z-50 flex h-14 w-full items-center justify-between px-8 py-1 backdrop-blur-xl">
       <Link className="h-full" href="/">
-        <Image
-          className="h-full w-auto"
-          alt="logo"
-          src="/img/logo/signature-light.png"
-          width={100}
-          height={100}
-        />
+        <Logo className="h-fit w-24" />
       </Link>
 
       <div className="flex items-center justify-end gap-8 overflow-hidden">
@@ -68,7 +62,7 @@ const CollapsibleMenu = ({
   return (
     <div
       className={cn(
-        "fixed inset-0 flex h-screen w-screen bg-black/60 p-8 backdrop-blur-xl md:bg-transparent md:backdrop-blur-none",
+        "bg-background/60 fixed inset-0 flex h-screen w-screen p-8 backdrop-blur-xl md:bg-transparent md:backdrop-blur-none",
         "transition-all duration-300",
         "md:static md:h-auto md:w-auto md:items-center md:justify-end md:gap-8 md:bg-transparent md:p-0",
         isOpen
@@ -80,12 +74,12 @@ const CollapsibleMenu = ({
         {sections.map((section) => (
           <li
             key={section.href}
-            className="group relative text-2xl font-bold uppercase tracking-widest text-white opacity-95 transition-all hover:opacity-100 md:text-sm"
+            className="text-primary group relative text-2xl font-bold uppercase tracking-widest opacity-95 transition-all hover:opacity-100 md:text-sm"
           >
             <Link onClick={toggleMenu} href={section.href}>
               {section.title}
             </Link>
-            <span className="pointer-events-none absolute bottom-0 right-0 h-0 w-full bg-white transition-all group-hover:h-2" />
+            <span className="bg-primary pointer-events-none absolute bottom-0 right-0 h-0 w-full transition-all group-hover:h-2" />
           </li>
         ))}
       </ul>

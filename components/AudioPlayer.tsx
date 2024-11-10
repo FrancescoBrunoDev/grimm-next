@@ -87,17 +87,17 @@ const Controls: React.FC<ControlsProps> = ({
   return (
     <div className="flex w-full max-w-sm justify-between sm:max-w-32">
       <button onClick={handlePrev}>
-        <SkipBack className="hover:fill-black" />
+        <SkipBack className="hover:fill-background" />
       </button>
       <button onClick={handlePlayPause}>
         {isPlaying ? (
-          <Pause className="hover:fill-black" />
+          <Pause className="hover:fill-background" />
         ) : (
-          <Play className="hover:fill-black" />
+          <Play className="hover:fill-background" />
         )}
       </button>
       <button onClick={handleNext}>
-        <SkipForward className="hover:fill-black" />
+        <SkipForward className="hover:fill-background" />
       </button>
     </div>
   );
@@ -130,11 +130,11 @@ const Timeline: React.FC<TimelineProps> = ({
     <div className="flex w-full flex-row items-center gap-2 text-sm">
       <span className="w-8 text-right">{formatTime(progress)}</span>
       <div
-        className="w-100 h-2 flex-grow cursor-pointer rounded-full bg-black/40"
+        className="w-100 bg-background/40 h-2 flex-grow cursor-pointer rounded-full"
         onClick={handleSliderChange}
       >
         <div
-          className="h-full rounded-full bg-black"
+          className="h-full rounded-full bg-background"
           style={{
             width: `${duration ? (progress / duration) * 100 : 0}%`,
           }}
@@ -165,13 +165,13 @@ const Playlist: React.FC<PlaylistProps> = ({
           <button
             key={index}
             onClick={() => onTrackSelect(index)}
-            className={`flex w-full items-center justify-between rounded-md p-2 text-left transition hover:bg-black/5 ${
-              currentTrackIndex === index ? "bg-black/10" : ""
+            className={`hover:bg-background/5 flex w-full items-center justify-between rounded-md p-2 text-left transition ${
+              currentTrackIndex === index ? "bg-background/10" : ""
             }`}
           >
             <div>
               <div>{track.name}</div>
-              <div className="text-sm text-black/70">{track.artist}</div>
+              <div className="text-background/70 text-sm">{track.artist}</div>
             </div>
             {currentTrackIndex === index && isPlaying && (
               <div className="text-sm">Playing</div>
@@ -248,7 +248,7 @@ export const AudioPlayer: React.FC<AudioPlayerProps> = ({ tracks }) => {
   }, [currentTrackIndex, isPlaying]);
 
   return (
-    <div className="flex w-full flex-col items-center gap-2 rounded-lg bg-white p-4 text-black">
+    <div className="bg-primary flex w-full flex-col items-center gap-2 rounded-lg p-4 text-background">
       <Playlist
         tracks={tracks}
         currentTrackIndex={currentTrackIndex}

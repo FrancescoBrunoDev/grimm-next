@@ -35,7 +35,7 @@ export const About = () => {
     >
       <div
         className={cn(
-          "display items-center gap-8 rounded-xl bg-white px-8 py-4 text-black md:flex md:flex-row md:bg-transparent md:p-0 md:text-white",
+          "display bg-primary md:text-primary items-center gap-8 rounded-xl px-8 py-4 text-background md:flex md:flex-row md:bg-transparent md:p-0",
         )}
       >
         <div

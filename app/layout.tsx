@@ -30,7 +30,7 @@ export default function RootLayout({
       className={`${regular.variable} ${regatto.variable} scroll-smooth`}
     >
       <body
-        className={`bg-black font-regular text-lg leading-6 text-white antialiased`}
+        className={`text-primary bg-background font-regular text-lg leading-6 antialiased`}
       >
         <Navbar />
         {children}

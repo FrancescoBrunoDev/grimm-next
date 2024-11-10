@@ -148,9 +148,9 @@ const SpecialSelector = (special: { component: Specials; data: ImgDots }) => {
   switch (special.component) {
     case "ImgDots":
       return (
-        <ImgDots data={special.data} className="bg-white">
+        <ImgDots data={special.data} className="bg-primary">
           <ImgDotsImage
-            dotColor="white"
+            dotColor="primary"
             className="xl:min-h-full xl:min-w-fit"
           />
           <ImgDotsDescription />

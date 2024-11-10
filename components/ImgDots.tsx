@@ -121,7 +121,7 @@ export const ImgDotsDescription = ({ className }: ImgDotsDescriptionProps) => {
   return (
     <div
       className={cn(
-        "h-full w-full overflow-y-auto rounded-lg bg-white p-4 text-black xl:w-1/2",
+        "bg-primary h-full w-full overflow-y-auto rounded-lg p-4 text-background xl:w-1/2",
         className,
       )}
     >

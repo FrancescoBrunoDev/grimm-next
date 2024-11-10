@@ -14,6 +14,8 @@
 :root {
   --background: #ffffff;
   --foreground: #171717;
+  --primary: #e2e8f0;
+  --secondary: #9ca3af;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -30,11 +32,15 @@ body {
 }
 
 a {
-  @apply text-gray-400 transition-colors;
+  @apply text-secondary transition-colors;
+}
+
+a:visited {
+  @apply text-secondary;
 }
 
 a:hover {
-  @apply text-white;
+  @apply text-primary;
 }
 
 .bg-cover-der-Komponist {

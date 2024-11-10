@@ -67,6 +67,7 @@ export const Austellung = () => {
                     src={img}
                     alt={title}
                   />
+                  <div className="absolute inset-0 rounded-lg bg-gradient-to-t from-background to-transparent opacity-0 transition-opacity group-hover:opacity-100" />
                   <Link href={href} className="relative block size-full">
                     <p className="absolute inset-x-0 bottom-0 hidden p-2 text-4xl font-bold uppercase group-hover:z-10 group-hover:block">
                       {title}

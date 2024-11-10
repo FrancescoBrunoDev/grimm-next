@@ -10,17 +10,16 @@ export const Button = ({
   onClick,
 }: {
   text: string;
-  color: "black" | "white";
+  color: "background" | "primary";
   className?: string;
   href?: string;
   onClick?: () => void;
 }) => {
   const baseClass = cn(
-    "h-fit rounded-lg px-4 py-2 transition-all",
+    "h-fit rounded-lg px-4 py-2 transition-all hover:bg-opacity-80 hover:scale-[1.02] hover:drop-shadow-lg",
     {
-      "bg-black text-white hover:bg-opacity-80": color === "black",
-      "bg-white text-black hover:bg-opacity-80 hover:text-black":
-        color === "white",
+      "bg-background text-primary ": color === "background",
+      "bg-primary text-background hover:text-background": color === "primary",
     },
     className,
   );

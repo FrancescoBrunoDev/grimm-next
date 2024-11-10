@@ -16,12 +16,12 @@ export const Impressum = () => {
     {
       alt: "Universitätsgesellschaft Münster e.V.",
       href: "https://www.uni-muenster.de/Foerderer/",
-      src: "/img/Impressum/1_uni.png",
+      src: "/img/Impressum/ugm_v4.svg",
     },
     {
       alt: "Stadtarchiv Münster",
       href: "https://www.stadt-muenster.de/archiv/startseite",
-      src: "/img/Impressum/Stadtarchiv.jpg",
+      src: "/img/Impressum/Stadtarchiv.png",
     },
     {
       alt: "Universität Münster",
@@ -31,7 +31,7 @@ export const Impressum = () => {
     {
       alt: "Universität Münster - Institut für Musikwissenschaft",
       href: "https://www.uni-muenster.de/Musikwissenschaft/",
-      src: "/img/Impressum/MuWi-Institut.jpeg",
+      src: "/img/Impressum/MuWi-Institut.png",
     },
   ];
 
@@ -43,7 +43,7 @@ export const Impressum = () => {
       <div
         ref={ref}
         className={cn(
-          "flex flex-col gap-8 rounded-xl bg-white p-8",
+          "bg-primary flex flex-col gap-8 rounded-xl p-8",
           "transition-all delay-[100ms] duration-[1000ms]",
           {
             "translate-y-0 opacity-100": isInView,
@@ -51,12 +51,12 @@ export const Impressum = () => {
           },
         )}
       >
-        <div className="flex flex-col items-center gap-12 text-black lg:flex-row">
+        <div className="flex flex-col items-center gap-12 text-background lg:flex-row">
           <h1 className="place-self-start font-elegant text-4xl sm:text-6xl lg:place-self-center">
             Impressum
           </h1>
-          <div className="flex flex-col gap-4 text-base text-gray-400">
-            <p className="font-regularBold text-balance">
+          <div className="flex flex-col gap-4 text-base">
+            <p className="text-balance font-regular">
               Online-Ausstellung im Rahmen des Grimm-Forschungsprojekts am
               Institut für Musikwissenschaft der Universität Münster
             </p>
@@ -65,10 +65,11 @@ export const Impressum = () => {
                 Design & Programmierung:
                 <br />
                 <Link
-                  className="flex items-center hover:text-black"
+                  className="group relative flex w-fit items-center text-background hover:text-background"
                   href={"https://www.francesco-bruno.com"}
                 >
-                  Francesco Bruno <ExternalLink className="h-4" />
+                  Francesco Bruno{" "}
+                  <ExternalLink className="h-4 group-hover:-rotate-12" />
                 </Link>
                 <br />
                 Projektleitung & Konzeption: Anna Maria Plischka & Peter Schmitz
@@ -80,7 +81,11 @@ export const Impressum = () => {
                 <br /> Philippistr. 2b
                 <br /> 48149 Münster
               </p>
-              <Button color="black" text="Abbildungsnachweise" href="" />
+              <Button
+                color="background"
+                text="Abbildungsnachweise"
+                href="/img/Home_Page/Abbildungsnachweise.pdf"
+              />
             </div>
           </div>
         </div>
