@@ -35,10 +35,6 @@ a {
   @apply text-secondary transition-colors;
 }
 
-a:visited {
-  @apply text-secondary;
-}
-
 a:hover {
   @apply text-primary;
 }

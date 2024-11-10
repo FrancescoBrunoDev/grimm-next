@@ -43,7 +43,7 @@ export const Impressum = () => {
       <div
         ref={ref}
         className={cn(
-          "bg-primary flex flex-col gap-8 rounded-xl p-8",
+          "flex flex-col gap-8 rounded-xl bg-primary p-8",
           "transition-all delay-[100ms] duration-[1000ms]",
           {
             "translate-y-0 opacity-100": isInView,

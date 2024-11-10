@@ -33,6 +33,8 @@ export const Projekt = () => {
             src="/img/Home_Page/Grimm_Julius_05_1316.jpg"
             alt="Frase"
             fill
+            sizes="30vw"
+            priority={true}
             quality={50}
           />
         </div>

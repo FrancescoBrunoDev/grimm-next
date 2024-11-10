@@ -35,7 +35,7 @@ export const About = () => {
     >
       <div
         className={cn(
-          "display bg-primary md:text-primary items-center gap-8 rounded-xl px-8 py-4 text-background md:flex md:flex-row md:bg-transparent md:p-0",
+          "display items-center gap-8 rounded-xl bg-primary px-8 py-4 text-background md:flex md:flex-row md:bg-transparent md:p-0 md:text-primary",
         )}
       >
         <div
@@ -53,6 +53,8 @@ export const About = () => {
             src="/img/Home_Page/NLGrimm_V_Zweite_Suite_04.jpeg"
             alt="Frase"
             fill
+            priority={true}
+            sizes="30vw"
             quality={50}
           />
         </div>

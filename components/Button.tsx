@@ -18,7 +18,7 @@ export const Button = ({
   const baseClass = cn(
     "h-fit rounded-lg px-4 py-2 transition-all hover:bg-opacity-80 hover:scale-[1.02] hover:drop-shadow-lg",
     {
-      "bg-background text-primary ": color === "background",
+      "bg-background text-primary": color === "background",
       "bg-primary text-background hover:text-background": color === "primary",
     },
     className,
