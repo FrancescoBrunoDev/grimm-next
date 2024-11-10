@@ -57,7 +57,7 @@ export const Impressum = () => {
           <div className="flex flex-col gap-4 text-base text-gray-400">
             <p className="font-regularBold text-balance">
               Online-Ausstellung im Rahmen des Grimm-Forschungsprojekts am
-              Institut für Musikwissenschaft der WWU Münster
+              Institut für Musikwissenschaft der Universität Münster
             </p>
             <div className="flex flex-wrap items-center justify-between gap-8 md:flex-nowrap">
               <p className="w-48">
@@ -68,7 +68,7 @@ export const Impressum = () => {
               </p>
               <p>
                 Institut für Musikwissenschaft
-                <br /> WWU Münster
+                <br /> Universität Münster
                 <br /> Philippistr. 2b
                 <br /> 48149 Münster
               </p>

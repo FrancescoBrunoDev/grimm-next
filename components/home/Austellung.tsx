@@ -30,7 +30,7 @@ export const Austellung = () => {
     },
     {
       title: "Historischer Stadtrundgang",
-      img: "/img/Home_Page/Raum0005.jpeg",
+      img: "/img/Home_Page/Raum0007.jpeg",
       href: "/ausstellung/Grimm_in_Muenster",
     },
   ];

@@ -25,7 +25,7 @@ export const Navbar = () => {
       </Link>
 
       <div className="flex items-center justify-end gap-8 overflow-hidden">
-        <CollapsibleMenu isOpen={isOpen} />
+        <CollapsibleMenu toggleMenu={toggleMenu} isOpen={isOpen} />
         <div className="relative flex h-7 w-7 items-center justify-center">
           <div
             className={cn(
@@ -50,7 +50,13 @@ export const Navbar = () => {
   );
 };
 
-const CollapsibleMenu = ({ isOpen }: { isOpen: boolean }) => {
+const CollapsibleMenu = ({
+  isOpen,
+  toggleMenu,
+}: {
+  isOpen: boolean;
+  toggleMenu: () => void;
+}) => {
   const sections = [
     { title: "Home", href: "/" },
     { title: "Projekt", href: "/#projekt" },
@@ -62,7 +68,7 @@ const CollapsibleMenu = ({ isOpen }: { isOpen: boolean }) => {
   return (
     <div
       className={cn(
-        "fixed inset-0 flex h-screen w-screen bg-black/60 p-8 backdrop-blur-xl",
+        "fixed inset-0 flex h-screen w-screen bg-black/60 p-8 backdrop-blur-xl md:bg-transparent md:backdrop-blur-none",
         "transition-all duration-300",
         "md:static md:h-auto md:w-auto md:items-center md:justify-end md:gap-8 md:bg-transparent md:p-0",
         isOpen
@@ -76,7 +82,9 @@ const CollapsibleMenu = ({ isOpen }: { isOpen: boolean }) => {
             key={section.href}
             className="group relative text-2xl font-bold uppercase tracking-widest text-white opacity-95 transition-all hover:opacity-100 md:text-sm"
           >
-            <Link href={section.href}>{section.title}</Link>
+            <Link onClick={toggleMenu} href={section.href}>
+              {section.title}
+            </Link>
             <span className="pointer-events-none absolute bottom-0 right-0 h-0 w-full bg-white transition-all group-hover:h-2" />
           </li>
         ))}
