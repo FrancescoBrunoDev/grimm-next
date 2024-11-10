@@ -18,6 +18,7 @@ export default function KunstlerNetzwerk() {
               width={1000}
               height={1000}
               className="h-4/5 w-auto object-cover brightness-75 md:brightness-100"
+              priority={true}
             />
           </div>
         </div>

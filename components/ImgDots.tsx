@@ -83,8 +83,9 @@ export const ImgDotsImage = ({
         alt={data.alt}
         width={1000}
         height={1000}
-        quality={80}
+        quality={90}
         src={data.src}
+        priority={true}
       />
       {data.dots.map((dot, index) => (
         <div

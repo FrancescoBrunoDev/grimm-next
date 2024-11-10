@@ -3,6 +3,7 @@ import { Button } from "@/components/Button";
 import Link from "next/link";
 import Image from "next/image";
 import { useInView, cn } from "@/utils/utils";
+import { ExternalLink } from "lucide-react";
 
 export const Impressum = () => {
   const { ref, isInView } = useInView({
@@ -61,7 +62,14 @@ export const Impressum = () => {
             </p>
             <div className="flex flex-wrap items-center justify-between gap-8 md:flex-nowrap">
               <p className="w-48">
-                Design & Programmierung: Francesco Bruno
+                Design & Programmierung:
+                <br />
+                <Link
+                  className="flex items-center hover:text-black"
+                  href={"https://www.francesco-bruno.com"}
+                >
+                  Francesco Bruno <ExternalLink className="h-4" />
+                </Link>
                 <br />
                 Projektleitung & Konzeption: Anna Maria Plischka & Peter Schmitz
                 Texte: Peter Schmitz

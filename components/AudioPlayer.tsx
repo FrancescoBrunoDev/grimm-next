@@ -170,7 +170,7 @@ const Playlist: React.FC<PlaylistProps> = ({
             }`}
           >
             <div>
-              <div className="font-medium">{track.name}</div>
+              <div>{track.name}</div>
               <div className="text-sm text-black/70">{track.artist}</div>
             </div>
             {currentTrackIndex === index && isPlaying && (

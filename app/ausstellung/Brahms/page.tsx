@@ -36,6 +36,7 @@ export default function Brahms() {
               width={1000}
               height={1000}
               className="h-full w-auto object-cover"
+              priority={true}
             />
           </div>
           <div className="absolute bottom-0 right-0 top-0 h-full w-auto">
@@ -45,6 +46,7 @@ export default function Brahms() {
               width={1000}
               height={1000}
               className="h-full w-auto object-cover"
+              priority={true}
             />
           </div>
         </div>

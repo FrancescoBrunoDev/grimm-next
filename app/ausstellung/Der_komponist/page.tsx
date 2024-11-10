@@ -32,6 +32,7 @@ export default function Der_komponist() {
               width={1000}
               height={1000}
               className="w-screen max-w-screen-md object-cover brightness-75 md:brightness-100"
+              priority={true}
             />
           </div>
         </div>

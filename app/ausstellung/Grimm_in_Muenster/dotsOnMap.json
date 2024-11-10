@@ -9,7 +9,18 @@
       "paragraph": {
         "title": "Grimm-Wohnhaus",
         "text": "<span> 1874 zog die Familie Grimm in ihr Haus in der Langestraße A1 (heutige Rudolf-von-Langen-Straße), welches nicht mehr existiert. Zu diesem Haus schreibt Ludwig:<br> <br> „Seit Grimm ein eigenes, schmuckes Häuschen an der Kreuzschanze besaß und die Freunde stets bei ihm ganz zu Gaste sein konnten, war das Zusammensein für alle von besonderem Reiz. Die Gemütlichkeit und trauliche Wärme der Grimmschen Häuslichkeit hatte es den Freunden gar sehr angetan. Wie gern kommt Brahms, um mit dem lieben alten Freunde behaglich in der Sofaecke zu sitzen, von Altem und Neuem zu plaudern und von dem guten alten Marsala aus den schönen, geschliffenen Pokalen zu trinken. Grimm hatte schon in Göttingen mit der Sammlung schöner alter Trinkgefäße begonnen; diese hatte sich jetzt zu einem Schatze vermehrt, und wenn sich die Künstler nach den Konzertabenden im Grimmschen Hause zur frohen Runde versammelten, trug die Benutzung dieser köstlichen Pokale nicht wenig zur gehobenen Stimmung bei.“ </span> <span class='text-right'> aus: Franz Ludwig: Julius Otto Grimm. Ein Beitrag zur Geschichte der musikalischen Spätromantik, Bielefeld und Leipzig 1925, S. 99. </span>",
-        "sideImg": false
+        "sideImg": false,
+        "galleryIds": [
+          {
+            "title": "Grimm-Wohnhaus",
+            "cover": "/img/7/Wohnhaus/Briefe_dAlbert_04a.jpg",
+            "images": [
+              {
+                "src": "/img/7/Wohnhaus/Briefe_dAlbert_04a.jpg"
+              }
+            ]
+          }
+        ]
       }
     },
     {
