@@ -49,7 +49,7 @@ export const Austellung = () => {
           className="mx-0"
         />
         <div className="flex w-full">
-          <ul className="flex w-full flex-col items-center gap-2 md:h-56 md:flex-row md:overflow-x-auto">
+          <ul className="grid w-full grid-cols-1 items-center gap-2 sm:grid-cols-2 md:flex md:h-56 md:flex-row md:overflow-x-auto">
             {expositions.map(({ title, img, href }, index) => {
               let pushBack = false;
               if (idHover !== false && idHover !== index) pushBack = true;
