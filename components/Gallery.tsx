@@ -45,7 +45,7 @@ const GalleryOverlay: React.FC<GalleryOverlayProps> = ({
   return createPortal(
     <div
       className={cn(
-        "text-primary bg-background/70 fixed inset-0 z-[9999] flex items-center justify-center",
+        "fixed inset-0 z-[9999] flex items-center justify-center bg-black/70 text-primary",
         "transition-all duration-300",
         {
           "translate-y-0 scale-100 opacity-100 backdrop-blur-xl": isAnimating,
@@ -121,7 +121,7 @@ export const Gallery = ({ gallery, className, style }: GalleryProps) => {
       <button
         onClick={() => setIsOpen(true)}
         className={cn(
-          "text-primary group relative w-full overflow-hidden rounded-lg transition-all",
+          "group relative w-full overflow-hidden rounded-lg text-primary transition-all",
           className,
         )}
         style={{
@@ -220,7 +220,7 @@ const Preview = ({
             alt={image.caption || fallbackCaption}
           />
           <div className="absolute inset-0 flex items-center justify-center">
-            <div className="bg-primary h-8 w-8 rounded-full p-1 text-center text-background">
+            <div className="h-8 w-8 rounded-full bg-primary p-1 text-center text-background">
               {index + 1}
             </div>
           </div>

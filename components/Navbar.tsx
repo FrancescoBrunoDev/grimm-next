@@ -13,7 +13,7 @@ export const Navbar = () => {
   };
 
   return (
-    <nav className="bg-background/60 fixed inset-x-0 top-0 z-50 flex h-14 w-full items-center justify-between px-4 py-1 backdrop-blur-xl md:px-8">
+    <nav className="fixed inset-x-0 top-0 z-50 flex h-14 w-full items-center justify-between bg-black/70 px-4 py-1 backdrop-blur-xl md:px-8">
       <Link className="h-full" href="/">
         <Logo className="h-fit w-24" />
       </Link>
@@ -62,7 +62,7 @@ const CollapsibleMenu = ({
   return (
     <div
       className={cn(
-        "bg-background/60 fixed inset-0 flex h-screen w-screen p-8 backdrop-blur-xl md:bg-transparent md:backdrop-blur-none",
+        "fixed inset-0 flex h-screen w-screen bg-black/70 p-8 backdrop-blur-xl md:bg-transparent md:backdrop-blur-none",
         "transition-all duration-300",
         "md:static md:h-auto md:w-auto md:items-center md:justify-end md:gap-8 md:bg-transparent md:p-0",
         isOpen
@@ -74,7 +74,7 @@ const CollapsibleMenu = ({
         {sections.map((section) => (
           <li
             key={section.href}
-            className="group relative text-2xl font-bold uppercase tracking-widest text-primary opacity-95 transition-all hover:opacity-100 md:text-sm"
+            className="group relative text-2xl font-bold uppercase tracking-widest text-primary transition-all md:text-sm"
           >
             <Link onClick={toggleMenu} href={section.href}>
               {section.title}
