@@ -56,7 +56,7 @@ export const Impressum = () => {
             Impressum
           </h1>
           <div className="flex flex-col gap-4 text-base">
-            <p className="text-balance font-regular">
+            <p className="font-regular">
               Online-Ausstellung im Rahmen des Grimm-Forschungsprojekts am
               Institut für Musikwissenschaft der Universität Münster
             </p>
@@ -71,8 +71,8 @@ export const Impressum = () => {
                   Francesco Bruno{" "}
                   <ExternalLink className="h-4 group-hover:-rotate-12" />
                 </Link>
-                <br />
                 Projektleitung & Konzeption: Anna Maria Plischka & Peter Schmitz
+                <br />
                 Texte: Peter Schmitz
               </p>
               <p>
