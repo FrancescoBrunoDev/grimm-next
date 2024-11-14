@@ -39,7 +39,7 @@ export const Austellung = () => {
   return (
     <section
       id="austellung"
-      className="mx-auto flex h-screen w-screen max-w-screen-xl items-center px-4 py-12 md:px-8 md:py-12"
+      className="mx-auto flex w-screen max-w-screen-xl items-center px-4 py-12 md:h-screen md:px-8 md:py-12"
     >
       <div className="flex w-full flex-col items-start gap-4">
         <FitTitle
