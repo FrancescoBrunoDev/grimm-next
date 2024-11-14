@@ -17,7 +17,7 @@ export default function Home() {
         <div className="lg:snap-center lg:snap-always">
           <About />
         </div>
-        <div className="snap-center snap-always">
+        <div className="lg:snap-center lg:snap-always">
           <Austellung />
         </div>
         <div className="lg:snap-center lg:snap-always">

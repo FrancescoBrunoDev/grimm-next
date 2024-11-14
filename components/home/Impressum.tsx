@@ -38,12 +38,12 @@ export const Impressum = () => {
   return (
     <section
       id="impressum"
-      className="mx-auto flex w-screen max-w-screen-xl items-center justify-center px-8 py-12 md:h-screen md:py-12"
+      className="mx-auto flex w-screen max-w-screen-xl items-center justify-center px-4 md:h-screen md:px-8 md:py-12"
     >
       <div
         ref={ref}
         className={cn(
-          "flex flex-col gap-8 rounded-xl bg-primary p-8",
+          "flex flex-col gap-8 rounded-xl bg-primary p-4 md:p-8",
           "transition-all delay-[100ms] duration-[1000ms]",
           {
             "translate-y-0 opacity-100": isInView,

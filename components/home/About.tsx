@@ -31,11 +31,11 @@ export const About = () => {
     <section
       ref={ref}
       id="about"
-      className="mx-auto flex w-screen max-w-screen-xl items-center px-8 py-12 md:h-screen md:py-12"
+      className="mx-auto flex w-screen max-w-screen-xl items-center px-4 md:h-screen md:px-8 md:py-12"
     >
       <div
         className={cn(
-          "display items-center gap-8 rounded-xl bg-primary px-8 py-4 text-background md:flex md:flex-row md:bg-transparent md:p-0 md:text-primary",
+          "display items-center gap-8 rounded-xl bg-primary px-4 py-4 text-background md:flex md:flex-row md:bg-transparent md:p-0 md:px-8 md:text-primary",
         )}
       >
         <div
@@ -51,7 +51,7 @@ export const About = () => {
           <Image
             className="object-cover"
             src="/img/Home_Page/NLGrimm_V_Zweite_Suite_04.jpeg"
-            alt="Frase"
+            alt="Grimm Zweite Suite Cover"
             fill
             priority={true}
             sizes="30vw"

@@ -3,6 +3,7 @@ import { useState } from "react";
 import Link from "next/link";
 import { FitTitle } from "@/components/FitTitle";
 import Image from "next/image";
+import { cn } from "@/utils/utils";
 
 export const Austellung = () => {
   const [idHover, setIdHover] = useState<boolean | number>(false);
@@ -38,9 +39,9 @@ export const Austellung = () => {
   return (
     <section
       id="austellung"
-      className="mx-auto flex h-screen w-screen max-w-screen-xl items-center px-8 py-12 md:py-12"
+      className="mx-auto flex h-screen w-screen max-w-screen-xl items-center px-4 py-12 md:px-8 md:py-12"
     >
-      <div className="flex w-full flex-col items-start">
+      <div className="flex w-full flex-col items-start gap-4">
         <FitTitle
           words={["Ausstellungsräume"]}
           size="md"
@@ -48,7 +49,7 @@ export const Austellung = () => {
           className="mx-0"
         />
         <div className="flex w-full">
-          <ul className="flex h-56 items-center gap-2 overflow-x-auto">
+          <ul className="flex w-full flex-col items-center gap-2 md:h-56 md:flex-row md:overflow-x-auto">
             {expositions.map(({ title, img, href }, index) => {
               let pushBack = false;
               if (idHover !== false && idHover !== index) pushBack = true;
@@ -58,21 +59,24 @@ export const Austellung = () => {
                   key={index}
                   onMouseEnter={() => setIdHover(index)}
                   onMouseLeave={() => setIdHover(false)}
-                  className={`group relative h-40 w-64 shrink-0 transition-all hover:h-48 hover:w-72 ${pushBack && "opacity-50"}`}
+                  className={cn(
+                    `group relative h-40 w-full shrink-0 overflow-hidden rounded-xl transition-all md:w-64 md:hover:h-48 md:hover:w-72`,
+                    { "opacity-50": pushBack },
+                  )}
                 >
-                  <Image
-                    className="rounded-xl object-cover"
-                    fill
-                    quality={50}
-                    src={img}
-                    alt={title}
-                  />
-                  <div className="absolute inset-0 rounded-lg bg-gradient-to-t from-background to-transparent opacity-0 transition-opacity group-hover:opacity-100" />
-                  <Link href={href} className="relative block size-full">
-                    <p className="absolute inset-x-0 bottom-0 hidden p-2 text-4xl font-bold uppercase group-hover:z-10 group-hover:block">
-                      {title}
-                    </p>
+                  <Link href={href} className="absolute inset-0">
+                    <div className="absolute inset-0 z-10 bg-gradient-to-t from-background to-transparent opacity-100 transition-opacity md:opacity-50 md:group-hover:opacity-100" />
+                    <Image
+                      className="object-cover"
+                      fill
+                      quality={50}
+                      src={img}
+                      alt={title}
+                    />
                   </Link>
+                  <p className="absolute inset-x-0 bottom-0 z-10 p-2 text-2xl font-bold uppercase md:hidden md:text-4xl md:group-hover:block">
+                    {title}
+                  </p>
                 </li>
               );
             })}
