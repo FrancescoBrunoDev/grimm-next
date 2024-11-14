@@ -53,15 +53,28 @@ export const Projekt = () => {
           <Link href="https://www.uni-muenster.de/Musikwissenschaft/Forschung/juliusottogrimm.html">
             Forschungs- und Lehrprojektes
           </Link>{" "}
-          zu Julius Otto Grimm am Institut für Musikwissenschaft der
-          Westfälischen Wilhelms-Universität Münster. Das Projekt wird von PD
-          Dr. Peter Schmitz und Anna Maria Plischka, M.A., M.A. geleitet. Nach
-          Lehrveranstaltungen zum Grimm-Nachlass im Stadtarchiv Münster (WS
-          2019/20 und WS 2021/22) fanden im Frühjahr und Sommer 2022 u.a. ein
-          studentischer Workshop sowie mehrere Grimm-Konzerte statt. Im Jahr
-          2023 werden Editionen bislang unveröffentlichter Kompositionen sowie
-          ein Sammelband zum Leben und Wirken Grimms im Waxmann-Verlag
-          erscheinen.
+          zu Julius Otto Grimm am Institut für Musikwissenschaft der Universität
+          Münster. Das Projekt wird von PD Dr. Peter Schmitz und Anna Maria
+          Plischka, M.A., M.A. geleitet. Nach Lehrveranstaltungen zum
+          Grimm-Nachlass im Stadtarchiv Münster (WS 2019/20 und WS 2021/22)
+          fanden im Frühjahr und Sommer 2022 u.a. ein studentischer Workshop
+          sowie mehrere Grimm-Konzerte statt. Eine{" "}
+          <Link href="https://miami.uni-muenster.de/Record/3a6b1381-7f78-41a6-9579-5f97935b1bae">
+            Edition der bisher unveröffentlichten Orchesterfassung von Grimms
+            Scherzo op. 5 Nr. 2
+          </Link>{" "}
+          ist durch Maximilian Greshake veröffentlicht worden. Die wichtigsten
+          Ergebnisse des Projektes sind ausführlich in dem opulenten Sammelband
+          <Link
+            href="https://www.waxmann.com/waxmann-buecher/?no_cache=1&tx_p2waxmann_pi2%5Bbuch
+										%5D=BUC128739&tx_p2waxmann_pi2%5Baction%5D=show&tx_p2waxmann_pi2%5Bcontrolle
+										r%5D=Buch&cHash=8f372def29c0f15bf5463fa41afc31da"
+          >
+            {" "}
+            Julius Otto Grimm - ein Komponist und Dirigent des Brahms-Kreises
+            nachzulesen
+          </Link>
+          .
         </p>
       </div>
     </section>
