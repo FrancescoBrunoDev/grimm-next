@@ -32,7 +32,7 @@ export default function Grimm_in_Muenster() {
       <Content className="flex h-[300vh] flex-col">
         <div className="h-screen" />
         <div className="h-screen">
-          <div className="bg-background/60 z-20 flex flex-col gap-4 p-6 backdrop-blur-xl">
+          <div className="z-20 flex flex-col gap-4 bg-black/70 p-6 backdrop-blur-xl">
             <p>
               Im letzten Ausstellungsraum sind die Umrisse eines historischen
               Stadtplanes von Münster zu sehen. Die roten Markierungen verweisen
