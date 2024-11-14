@@ -60,11 +60,14 @@ export const Austellung = () => {
                   onMouseEnter={() => setIdHover(index)}
                   onMouseLeave={() => setIdHover(false)}
                   className={cn(
-                    `group relative h-40 w-full shrink-0 overflow-hidden rounded-xl transition-all md:w-64 md:hover:h-48 md:hover:w-72`,
+                    `group relative h-40 w-full shrink-0 transition-all md:w-64 md:hover:h-48 md:hover:w-72`,
                     { "opacity-50": pushBack },
                   )}
                 >
-                  <Link href={href} className="absolute inset-0">
+                  <Link
+                    href={href}
+                    className="absolute inset-0 overflow-hidden rounded-xl"
+                  >
                     <div className="absolute inset-0 z-10 bg-gradient-to-t from-background to-transparent opacity-100 transition-opacity md:opacity-50 md:group-hover:opacity-100" />
                     <Image
                       className="object-cover"
