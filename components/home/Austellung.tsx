@@ -77,7 +77,7 @@ export const Austellung = () => {
                       alt={title}
                     />
                   </Link>
-                  <p className="absolute inset-x-0 bottom-0 z-10 p-2 text-2xl font-bold uppercase md:hidden md:text-4xl md:group-hover:block">
+                  <p className="pointer-events-none absolute inset-x-0 bottom-0 z-10 p-2 text-2xl font-bold uppercase md:hidden md:text-4xl md:group-hover:block">
                     {title}
                   </p>
                 </li>
