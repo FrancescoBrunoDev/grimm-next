@@ -18,6 +18,7 @@ type ImgDots = {
             text: string;
             sideImg?: boolean;
             galleryIds?: {
+                id: Key | null | undefined;
                 title: string;
                 cover: string;
             }[];

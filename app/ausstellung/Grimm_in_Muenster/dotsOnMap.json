@@ -12,6 +12,7 @@
         "sideImg": false,
         "galleryIds": [
           {
+            "id": 1,
             "title": "Grimm-Wohnhaus",
             "cover": "/img/7/Wohnhaus/Briefe_dAlbert_04a.jpg",
             "images": [
@@ -32,11 +33,22 @@
         "sideImg": false,
         "galleryIds": [
           {
+            "id": 2,
             "title": "Büste von Julius Otto Grimm",
             "cover": "/img/7/Büste/Pk0506.jpg",
             "images": [
               {
                 "src": "/img/7/Büste/Pk0506.jpg"
+              }
+            ]
+          },
+          {
+            "id": 3,
+            "title": "Grimm-Denkmal im Winter",
+            "cover": "/img/7/Büste/File13749.jpg",
+            "images": [
+              {
+                "src": "/img/7/Büste/File13749.jpg"
               }
             ]
           }
@@ -70,7 +82,7 @@
         "sideImg": false,
         "galleryIds": [
           {
-            "id": 2,
+            "id": 4,
             "title": "Grimmstraße",
             "cover": "/img/7/Straße/IMG_1231.JPG",
             "images": [
@@ -91,12 +103,12 @@
         "sideImg": false,
         "galleryIds": [
           {
-            "id": 3,
+            "id": 5,
             "title": "Grabstätte",
-            "cover": "/img/7/Büste/File13749.jpg",
+            "cover": "/img/1/Nach_dem_Tod/Grab.jpg",
             "images": [
               {
-                "src": "/img/7/Büste/File13749.jpg"
+                "src": "/img/1/Nach_dem_Tod/Grab.jpg"
               }
             ]
           }
@@ -121,12 +133,12 @@
         "sideImg": false,
         "galleryIds": [
           {
-            "id": 4,
+            "id": 6,
             "title": "Rathausfestsaal",
-            "cover": "/img/7/Orte_der_Musik_Rathaus_Gerbaulet/Rathaus.png",
+            "cover": "/img/7/Orte_der_Musik_Rathaus_Gerbaulet/Rathaus.jpg",
             "images": [
               {
-                "src": "/img/7/Orte_der_Musik_Rathaus_Gerbaulet/Rathaus.png"
+                "src": "/img/7/Orte_der_Musik_Rathaus_Gerbaulet/Rathaus.jpg"
               }
             ]
           }

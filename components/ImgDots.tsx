@@ -121,7 +121,7 @@ export const ImgDotsDescription = ({ className }: ImgDotsDescriptionProps) => {
   return (
     <div
       className={cn(
-        "bg-primary h-full w-full overflow-y-auto rounded-lg p-4 text-background xl:w-1/2",
+        "h-full w-full overflow-y-auto rounded-lg bg-primary p-4 text-background xl:w-1/2",
         className,
       )}
     >
@@ -146,8 +146,8 @@ export const ImgDotsDescription = ({ className }: ImgDotsDescriptionProps) => {
           {data.dots[selectedDotIndex].paragraph.galleryIds && (
             <div className="flex gap-2">
               {data.dots[selectedDotIndex].paragraph.galleryIds.map(
-                (gallery, idx) => (
-                  <div key={idx} className="w-48">
+                (gallery) => (
+                  <div key={gallery.id} className="w-48">
                     <Gallery
                       className="w-full rounded-lg object-contain"
                       gallery={gallery}
