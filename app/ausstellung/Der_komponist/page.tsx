@@ -31,7 +31,7 @@ export default function Der_komponist() {
               src="/img/4/Cover/Grimm_am_Klavier-small.png"
               width={1000}
               height={1000}
-              className="w-screen max-w-screen-md object-cover brightness-75 md:brightness-100"
+              className="w-screen max-w-screen-md object-cover brightness-75 md:brightness-90"
               priority={true}
             />
           </div>

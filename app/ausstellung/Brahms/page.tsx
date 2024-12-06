@@ -21,7 +21,7 @@ export default function Brahms() {
         ref={ref}
         className={cn(
           "fade-in-up transition-all duration-1000",
-          "relative before:absolute before:inset-x-0 before:bottom-0 before:h-32 before:bg-gradient-to-t before:from-background before:to-transparent before:opacity-100",
+          "relative before:absolute before:inset-x-0 before:bottom-0 before:h-1/4 before:bg-gradient-to-t before:from-background before:to-transparent before:opacity-100",
           {
             "translate-y-0 opacity-100": isInView,
             "translate-y-4 opacity-0": !isInView,
@@ -35,7 +35,7 @@ export default function Brahms() {
               src="/img/2/hero-section/Brahms.png"
               width={1000}
               height={1000}
-              className="h-full w-auto object-cover"
+              className="h-full w-auto object-cover brightness-75"
               priority={true}
             />
           </div>

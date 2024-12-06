@@ -28,6 +28,7 @@
           "text": "Grimm vertonte das Gedicht <i>Überall</i> von Richard Pohl im Mai 1853. Zunächst wählte er „Wenn droben eine Lerche singt“ als Titel. In der späteren Ausgabe (frühe 1890er Jahre) des Deutschen Liederverlags (ebenfalls Breitkopf & Härtel) wird hingegen die letzte Verszeile „Immerdar gedenk ich Dein“ zum Titel und auch die Tempobezeichnung erscheint leicht verändert.",
           "galleryIds": [
             {
+              "id": 1,
               "title": "Pensionierungsgesuch, Münster, 25. Juli 1900",
               "cover": "/img/4/1_Werke_im_Wandel/Wenn_droben_eine_Lerche_singt/ritagli/Titel_2.png"
             }
@@ -51,6 +52,7 @@
           "sideImg": true,
           "galleryIds": [
             {
+              "id": 2,
               "title": "Pensionierungsgesuch, Münster, 25. Juli 1900",
               "cover": "/img/4/1_Werke_im_Wandel/Wenn_droben_eine_Lerche_singt/ritagli/HandgeschriebeneNoten_63_dettaglio.jpg"
             }
@@ -65,10 +67,12 @@
           "text": "Die verschiedenen Quellen weisen in musikalischer Hinsicht nur wenige Unterschiede auf. Eine Ausnahme dokumentieren die Überklebungen sowie die zum Vergleich abgebildete Stelle im handschriftlichen Album.",
           "galleryIds": [
             {
+              "id": 3,
               "title": "Pensionierungsgesuch, Münster, 25. Juli 1900",
               "cover": "/img/4/1_Werke_im_Wandel/Wenn_droben_eine_Lerche_singt/ritagli/HandgeschriebeneNoten_62_dettaglio.jpg"
             },
             {
+              "id": 4,
               "title": "Pensionierungsgesuch, Münster, 25. Juli 1900",
               "cover": "/img/4/1_Werke_im_Wandel/Wenn_droben_eine_Lerche_singt/1_Prachtbändchen/HandgeschriebeneNoten_62-dettaglio@0,5x.jpg"
             }
