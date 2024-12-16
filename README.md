@@ -1,36 +1,11 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+## Der Brahms-Freund Julius Otto Grimm
+The online exhibition is part of a larger 
+[research and teaching project](https://www.uni-muenster.de/Musikwissenschaft/Forschung/juliusottogrimm.html) 
+on Julius Otto Grimm at the Institute of Musicology of the University of Münster.  
+The project is led by PD Dr. Peter Schmitz and Anna Maria Plischka, M.A., M.A.  
+Following seminars on the Grimm collection at the Münster City Archive (WS 2019/20 and WS 2021/22), a student workshop and several Grimm concerts took place in the spring and summer of 2022.  
 
-## Getting Started
-
-First, run the development server:
-
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
-
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
-
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
-
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+An [edition of the previously unpublished orchestral version of Grimm's Scherzo op. 5 No. 2](https://miami.uni-muenster.de/Record/3a6b1381-7f78-41a6-9579-5f97935b1bae) 
+was published by Maximilian Greshake.  
+The project's key findings are extensively documented in the opulent anthology 
+[Julius Otto Grimm – A Composer and Conductor of the Brahms Circle](https://www.waxmann.com/waxmann-buecher/?no_cache=1&tx_p2waxmann_pi2%5Bbuch%5D=BUC128739&tx_p2waxmann_pi2%5Baction%5D=show&tx_p2waxmann_pi2%5Bcontroller%5D=Buch&cHash=8f372def29c0f15bf5463fa41afc31da).
