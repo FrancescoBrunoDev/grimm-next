@@ -97,8 +97,11 @@ export const ImgDotsImage = ({
             onClick={() => setSelectedDotIndex(index)}
             className={cn(
               "h-5 w-5 cursor-pointer stroke-3 drop-shadow-xl transition",
-              `stroke-${dotColor} fill-${dotColor}`,
-              classNameDots,
+              dotColor === "primary"
+                ? "stroke-primary fill-primary"
+                : dotColor === "red-700"
+                  ? "fill-red-700 stroke-red-700"
+                  : classNameDots,
               selectedDotIndex !== index ? "fill-none" : `fill-${dotColor}`,
             )}
           />
@@ -121,7 +124,7 @@ export const ImgDotsDescription = ({ className }: ImgDotsDescriptionProps) => {
   return (
     <div
       className={cn(
-        "h-full w-full overflow-y-auto rounded-lg bg-primary p-4 text-background xl:w-1/2",
+        "bg-primary text-background h-full w-full overflow-y-auto rounded-lg p-4 xl:w-1/2",
         className,
       )}
     >
