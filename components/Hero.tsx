@@ -1,17 +1,15 @@
 "use client";
 import { cn } from "@/utils/utils";
+import { forwardRef } from "react";
 
-export const Hero = ({
-  children,
-  className,
-  ref,
-  style,
-}: Readonly<{
-  children: React.ReactNode;
-  className?: string;
-  ref?: React.RefObject<HTMLDivElement>;
-  style?: React.CSSProperties;
-}>) => {
+export const Hero = forwardRef<
+  HTMLDivElement,
+  Readonly<{
+    children: React.ReactNode;
+    className?: string;
+    style?: React.CSSProperties;
+  }>
+>(({ children, className, style }, ref) => {
   return (
     <div
       ref={ref}
@@ -24,4 +22,6 @@ export const Hero = ({
       {children}
     </div>
   );
-};
+});
+
+Hero.displayName = "Hero";

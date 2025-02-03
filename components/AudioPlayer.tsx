@@ -4,9 +4,9 @@ import { Play, Pause, SkipForward, SkipBack } from "lucide-react";
 import { cn } from "@/utils/utils";
 
 interface ControlsProps {
-  audioRef: React.RefObject<HTMLAudioElement>;
-  audioContextRef: React.MutableRefObject<AudioContext | undefined>;
-  gainNodeRef: React.MutableRefObject<GainNode | undefined>;
+  audioRef: React.RefObject<HTMLAudioElement | null>;
+  audioContextRef: React.RefObject<AudioContext | null>;
+  gainNodeRef: React.RefObject<GainNode | null>;
   isPlaying: boolean;
   setIsPlaying: (playing: boolean) => void;
   tracksLength: number;
@@ -123,7 +123,7 @@ const Timeline: React.FC<TimelineProps> = ({
     <div className="flex w-full flex-row items-center gap-2 text-sm">
       <span className="w-8 text-right">{formatTime(progress)}</span>
       <div
-        className="w-100 h-2 grow cursor-pointer rounded-full bg-black/10"
+        className="h-2 w-100 grow cursor-pointer rounded-full bg-black/10"
         onClick={handleSliderChange}
       >
         <div
@@ -194,10 +194,10 @@ export const AudioPlayer: React.FC<AudioPlayerProps> = ({
   const [progress, setProgress] = useState<number>(0);
   const [duration, setDuration] = useState<number>(0);
 
-  const audioRef = useRef<HTMLAudioElement>(null);
-  const audioContextRef = useRef<AudioContext>();
-  const gainNodeRef = useRef<GainNode>();
-  const sourceNodeRef = useRef<MediaElementAudioSourceNode>();
+  const audioRef = useRef<HTMLAudioElement | null>(null);
+  const gainNodeRef = useRef<GainNode | null>(null);
+  const audioContextRef = useRef<AudioContext | null>(null);
+  const sourceNodeRef = useRef<MediaElementAudioSourceNode | null>(null);
 
   const currentTrack = tracks[currentTrackIndex];
 
@@ -255,7 +255,7 @@ export const AudioPlayer: React.FC<AudioPlayerProps> = ({
   return (
     <div
       className={cn(
-        "flex w-full flex-col items-center gap-2 rounded-lg bg-primary p-4 text-black",
+        "bg-primary flex w-full flex-col items-center gap-2 rounded-lg p-4 text-black",
         className,
       )}
     >

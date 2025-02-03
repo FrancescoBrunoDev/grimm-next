@@ -74,7 +74,7 @@ export default function Grimm_in_Muenster() {
         <div className="fixed inset-0 mt-10 flex items-center justify-center">
           <ImgDots
             className={cn(
-              "max-h-screen max-w-(--breakpoint-xl) gap-10 p-5 pb-10 transition-all duration-700 xl:p-0",
+              "h-screen max-h-screen w-(--breakpoint-xl) gap-10 p-5 py-10 pb-10 transition-all duration-700 xl:p-0 xl:py-20",
               {
                 "scale-95 opacity-0": !isInView,
                 "scale-100 opacity-100": isInView,
@@ -83,7 +83,7 @@ export default function Grimm_in_Muenster() {
             data={dotsOnMap}
           >
             <div className="h-full w-full max-w-lg grow xl:max-w-fit">
-              <ImgDotsImage dotColor="red-700" className="h-full min-w-fit" />
+              <ImgDotsImage dotColor="red-700" className="h-full max-w-fit" />
             </div>
             <ImgDotsDescription className="xl:w-1/3" />
           </ImgDots>

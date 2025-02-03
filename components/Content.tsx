@@ -1,17 +1,16 @@
 "use client";
-import { cn } from "@/utils/utils";
 
-export const Content = ({
-  children,
-  size = "xl",
-  className,
-  ref,
-}: Readonly<{
-  children: React.ReactNode;
-  size?: "sm" | "md" | "lg" | "xl" | "2xl";
-  className?: string;
-  ref?: React.RefObject<HTMLDivElement>;
-}>) => {
+import { cn } from "@/utils/utils";
+import { forwardRef } from "react";
+
+export const Content = forwardRef<
+  HTMLDivElement,
+  Readonly<{
+    children: React.ReactNode;
+    size?: "sm" | "md" | "lg" | "xl" | "2xl";
+    className?: string;
+  }>
+>(({ children, size = "xl", className }, ref) => {
   return (
     <div
       ref={ref}
@@ -30,4 +29,6 @@ export const Content = ({
       {children}
     </div>
   );
-};
+});
+
+Content.displayName = "Content";

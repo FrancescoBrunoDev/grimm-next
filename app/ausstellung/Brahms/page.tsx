@@ -21,7 +21,7 @@ export default function Brahms() {
         ref={ref}
         className={cn(
           "fade-in-up transition-all duration-1000",
-          "relative before:absolute before:inset-x-0 before:bottom-0 before:h-1/4 before:bg-linear-to-t before:from-background before:to-transparent before:opacity-100",
+          "before:from-background relative before:absolute before:inset-x-0 before:bottom-0 before:h-1/4 before:bg-linear-to-t before:to-transparent before:opacity-100",
           {
             "translate-y-0 opacity-100": isInView,
             "translate-y-4 opacity-0": !isInView,
@@ -29,7 +29,7 @@ export default function Brahms() {
         )}
       >
         <div className="fixed -z-10 h-screen w-screen">
-          <div className="absolute bottom-0 left-0 top-0 h-full w-auto">
+          <div className="absolute top-0 bottom-0 left-0 h-full w-auto">
             <Image
               alt="Brahms"
               src="/img/2/hero-section/Brahms.png"
@@ -39,7 +39,7 @@ export default function Brahms() {
               priority={true}
             />
           </div>
-          <div className="absolute bottom-0 right-0 top-0 h-full w-auto">
+          <div className="absolute top-0 right-0 bottom-0 h-full w-auto">
             <Image
               alt="Grimm"
               src="/img/2/hero-section/Grimm.png"
