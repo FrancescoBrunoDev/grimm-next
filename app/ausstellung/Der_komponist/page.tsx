@@ -31,7 +31,7 @@ export default function Der_komponist() {
               src="/img/4/Cover/Grimm_am_Klavier-small.png"
               width={1000}
               height={1000}
-              className="w-screen max-w-screen-md object-cover brightness-75 md:brightness-90"
+              className="w-screen max-w-(--breakpoint-md) object-cover brightness-75 md:brightness-90"
               priority={true}
             />
           </div>
@@ -42,7 +42,7 @@ export default function Der_komponist() {
               "mx-0 transition-all delay-[100ms] duration-[2000ms]",
               {
                 "opacity-100 blur-none": isInView,
-                "opacity-0 blur-sm": !isInView,
+                "opacity-0 blur-xs": !isInView,
               },
             )}
             words={["Der Komponist", "& Bearbeiter"]}
@@ -55,7 +55,7 @@ export default function Der_komponist() {
               "transition-all delay-[100ms] duration-[2000ms]",
               {
                 "opacity-100 blur-none": isInView,
-                "opacity-0 blur-sm": !isInView,
+                "opacity-0 blur-xs": !isInView,
               },
             )}
           >

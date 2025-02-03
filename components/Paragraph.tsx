@@ -100,7 +100,7 @@ export const Paragraph = ({
             })}
           >
             <AudioPlayer
-              className="max-w-screen-md"
+              className="max-w-(--breakpoint-md)"
               tracks={paragraph.player}
             />
           </div>

@@ -15,7 +15,7 @@ export const Projekt = () => {
     <section
       id="projekt"
       ref={ref}
-      className="mx-auto flex w-screen max-w-screen-lg items-center p-4 md:h-screen md:px-8 md:py-12"
+      className="mx-auto flex w-screen max-w-(--breakpoint-lg) items-center p-4 md:h-screen md:px-8 md:py-12"
     >
       <div className="flex flex-row items-center gap-8">
         <div
@@ -41,7 +41,7 @@ export const Projekt = () => {
 
         <p
           className={cn(
-            "font-regularBold text-balance opacity-0",
+            "font-regular text-balance opacity-0",
             "transition-all duration-1000",
             {
               "translate-x-0 opacity-100": isInView,

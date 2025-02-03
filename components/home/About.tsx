@@ -31,11 +31,11 @@ export const About = () => {
     <section
       ref={ref}
       id="about"
-      className="mx-auto flex w-screen max-w-screen-xl items-center px-4 md:h-screen md:px-8 md:py-12"
+      className="mx-auto flex w-screen max-w-(--breakpoint-xl) items-center px-4 md:h-screen md:px-8 md:py-12"
     >
       <div
         className={cn(
-          "display items-center gap-8 rounded-xl bg-primary px-4 py-4 text-background md:flex md:flex-row md:bg-transparent md:p-0 md:px-8 md:text-primary",
+          "display bg-primary text-background md:text-primary items-center gap-8 rounded-xl px-4 py-4 md:flex md:flex-row md:bg-transparent md:p-0 md:px-8",
         )}
       >
         <div
@@ -64,7 +64,7 @@ export const About = () => {
         >
           <p
             className={cn(
-              "font-regularBold text-balance",
+              "font-regular text-balance",
               "transition-all delay-75 duration-1000",
               {
                 "line-clamp-1": isSmallScreen && !isOpen,
@@ -103,7 +103,7 @@ export const About = () => {
           {(isSmallScreen && isOpen) || !isSmallScreen ? (
             <p
               className={cn(
-                "font-regularBold text-balance",
+                "font-regular text-balance",
                 "transition-all delay-150 duration-1000",
                 {
                   "translate-x-0 opacity-100": isInView,

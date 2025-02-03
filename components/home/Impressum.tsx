@@ -38,7 +38,7 @@ export const Impressum = () => {
   return (
     <section
       id="impressum"
-      className="mx-auto flex w-screen max-w-screen-xl items-center justify-center px-4 md:h-screen md:px-8 md:py-12"
+      className="mx-auto flex w-screen max-w-(--breakpoint-xl) items-center justify-center px-4 md:h-screen md:px-8 md:py-12"
     >
       <div
         ref={ref}

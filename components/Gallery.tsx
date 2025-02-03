@@ -45,7 +45,7 @@ const GalleryOverlay: React.FC<GalleryOverlayProps> = ({
   return createPortal(
     <div
       className={cn(
-        "fixed inset-0 z-[9999] flex items-center justify-center bg-black/70 text-primary",
+        "fixed inset-0 z-9999 flex items-center justify-center bg-black/70 text-primary",
         "transition-all duration-300",
         {
           "translate-y-0 scale-100 opacity-100 backdrop-blur-xl": isAnimating,

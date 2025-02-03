@@ -22,7 +22,7 @@ export default function Ein_bewegtes_Musikerleben() {
             size="xl"
             className={cn("transition-all delay-[100ms] duration-[2000ms]", {
               "opacity-100 blur-none": isInView,
-              "opacity-0 blur-sm": !isInView,
+              "opacity-0 blur-xs": !isInView,
             })}
           />
           <div className="flex w-full">

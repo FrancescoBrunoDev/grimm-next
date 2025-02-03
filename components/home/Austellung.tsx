@@ -39,7 +39,7 @@ export const Austellung = () => {
   return (
     <section
       id="austellung"
-      className="mx-auto flex w-screen max-w-screen-xl items-center px-4 py-12 md:h-screen md:px-8 md:py-12"
+      className="mx-auto flex w-screen max-w-(--breakpoint-xl) items-center px-4 py-12 md:h-screen md:px-8 md:py-12"
     >
       <div className="flex w-full flex-col items-start gap-4">
         <FitTitle
@@ -68,7 +68,7 @@ export const Austellung = () => {
                     href={href}
                     className="absolute inset-0 overflow-hidden rounded-xl"
                   >
-                    <div className="absolute inset-0 z-10 bg-gradient-to-t from-background to-transparent opacity-100 transition-opacity md:opacity-50 md:group-hover:opacity-100" />
+                    <div className="absolute inset-0 z-10 bg-linear-to-t from-background to-transparent opacity-100 transition-opacity md:opacity-50 md:group-hover:opacity-100" />
                     <Image
                       className="object-cover"
                       fill

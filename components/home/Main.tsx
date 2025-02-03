@@ -9,7 +9,7 @@ export const Main = () => {
     <section
       className={cn(
         "relative flex h-screen w-screen items-center justify-center",
-        "before:absolute before:inset-x-0 before:bottom-0 before:h-32 before:bg-gradient-to-t before:from-background before:to-transparent before:opacity-100",
+        "before:absolute before:inset-x-0 before:bottom-0 before:h-32 before:bg-linear-to-t before:from-background before:to-transparent before:opacity-100",
       )}
     >
       <video

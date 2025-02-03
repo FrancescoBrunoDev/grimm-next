@@ -123,7 +123,7 @@ const Timeline: React.FC<TimelineProps> = ({
     <div className="flex w-full flex-row items-center gap-2 text-sm">
       <span className="w-8 text-right">{formatTime(progress)}</span>
       <div
-        className="w-100 h-2 flex-grow cursor-pointer rounded-full bg-black/10"
+        className="w-100 h-2 grow cursor-pointer rounded-full bg-black/10"
         onClick={handleSliderChange}
       >
         <div

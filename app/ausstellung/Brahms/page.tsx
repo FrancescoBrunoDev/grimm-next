@@ -21,7 +21,7 @@ export default function Brahms() {
         ref={ref}
         className={cn(
           "fade-in-up transition-all duration-1000",
-          "relative before:absolute before:inset-x-0 before:bottom-0 before:h-1/4 before:bg-gradient-to-t before:from-background before:to-transparent before:opacity-100",
+          "relative before:absolute before:inset-x-0 before:bottom-0 before:h-1/4 before:bg-linear-to-t before:from-background before:to-transparent before:opacity-100",
           {
             "translate-y-0 opacity-100": isInView,
             "translate-y-4 opacity-0": !isInView,
@@ -57,7 +57,7 @@ export default function Brahms() {
             size="lg"
             className={cn("transition-all delay-[100ms] duration-[2000ms]", {
               "opacity-100 blur-none": isInView,
-              "opacity-0 blur-sm": !isInView,
+              "opacity-0 blur-xs": !isInView,
             })}
           />
           <div

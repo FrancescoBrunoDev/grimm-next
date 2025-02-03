@@ -96,7 +96,7 @@ export const ImgDotsImage = ({
           <Circle
             onClick={() => setSelectedDotIndex(index)}
             className={cn(
-              "h-5 w-5 cursor-pointer stroke-[3] drop-shadow-xl transition",
+              "h-5 w-5 cursor-pointer stroke-3 drop-shadow-xl transition",
               `stroke-${dotColor} fill-${dotColor}`,
               classNameDots,
               selectedDotIndex !== index ? "fill-none" : `fill-${dotColor}`,

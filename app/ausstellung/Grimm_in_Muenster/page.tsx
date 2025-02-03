@@ -74,7 +74,7 @@ export default function Grimm_in_Muenster() {
         <div className="fixed inset-0 mt-10 flex items-center justify-center">
           <ImgDots
             className={cn(
-              "max-h-screen max-w-screen-xl gap-10 p-5 pb-10 transition-all duration-700 xl:p-0",
+              "max-h-screen max-w-(--breakpoint-xl) gap-10 p-5 pb-10 transition-all duration-700 xl:p-0",
               {
                 "scale-95 opacity-0": !isInView,
                 "scale-100 opacity-100": isInView,
