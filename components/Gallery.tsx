@@ -45,16 +45,19 @@ const GalleryOverlay: React.FC<GalleryOverlayProps> = ({
   return createPortal(
     <div
       className={cn(
-        "fixed inset-0 z-9999 flex items-center justify-center bg-black/70 text-primary",
+        "text-primary fixed inset-0 z-9999 flex items-center justify-center bg-black/70",
         "transition-all duration-300",
         {
           "translate-y-0 scale-100 opacity-100 backdrop-blur-xl": isAnimating,
-          "translate-y-5 scale-95 opacity-0 backdrop-blur-0": !isAnimating,
+          "backdrop-blur-0 translate-y-5 scale-95 opacity-0": !isAnimating,
         },
       )}
     >
       <Content className="relative h-full">
-        <button className="absolute right-4 top-4" onClick={handleClose}>
+        <button
+          className="absolute top-4 right-4 hover:cursor-pointer"
+          onClick={handleClose}
+        >
           <X />
         </button>
         <div className="grid size-full grid-cols-1 grid-rows-6 justify-center gap-4">
@@ -68,7 +71,7 @@ const GalleryOverlay: React.FC<GalleryOverlayProps> = ({
               <button
                 onClick={() => setSelected(selected - 1)}
                 disabled={selected === 0}
-                className="disabled:opacity-50"
+                className="hover:cursor-pointer disabled:cursor-default disabled:opacity-50"
               >
                 <ChevronLeft className="h-10 w-10" />
               </button>
@@ -78,7 +81,7 @@ const GalleryOverlay: React.FC<GalleryOverlayProps> = ({
               <button
                 onClick={() => setSelected(selected + 1)}
                 disabled={selected === images.length - 1}
-                className="disabled:opacity-50"
+                className="hover:cursor-pointer disabled:cursor-default disabled:opacity-50"
               >
                 <ChevronRight className="h-10 w-10" />
               </button>
@@ -121,7 +124,7 @@ export const Gallery = ({ gallery, className, style }: GalleryProps) => {
       <button
         onClick={() => setIsOpen(true)}
         className={cn(
-          "group relative w-full overflow-hidden rounded-lg text-primary transition-all",
+          "group text-primary relative w-full overflow-hidden rounded-lg transition-all hover:cursor-pointer",
           className,
         )}
         style={{
@@ -201,8 +204,9 @@ const Preview = ({
         <button
           onClick={() => setSelected(index)}
           key={index}
+          disabled={selected === index}
           className={cn(
-            "group relative h-full w-40 shrink-0 overflow-hidden rounded-lg transition-opacity",
+            "group relative h-full w-40 shrink-0 overflow-hidden rounded-lg transition-opacity hover:cursor-pointer disabled:cursor-default",
           )}
         >
           <Image
@@ -220,7 +224,7 @@ const Preview = ({
             alt={image.caption || fallbackCaption}
           />
           <div className="absolute inset-0 flex items-center justify-center">
-            <div className="h-8 w-8 rounded-full bg-primary p-1 text-center text-background">
+            <div className="bg-primary text-background h-8 w-8 rounded-full p-1 text-center">
               {index + 1}
             </div>
           </div>
