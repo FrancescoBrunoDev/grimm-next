@@ -9,7 +9,7 @@
     "lint": "next lint"
   },
   "engines": {
-    "node": ">=20.11.0"
+    "node": ">=22.11.0"
   },
   "dependencies": {
     "@react-three/drei": "10.5.1",
