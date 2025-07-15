@@ -95,7 +95,7 @@ export default function Grimm_in_Muenster() {
 
 const ScrollPath = ({ className }: { className?: string }) => {
   const pathRef = useRef<SVGPathElement>(null);
-  const [viewBox, setViewBox] = useState("0 0 1004.6 1345.5");
+  const [viewBox, setViewBox] = useState("0 0 0 0");
 
   useEffect(() => {
     const path = pathRef.current;
